@@ -83,3 +83,50 @@ input[type=text], [type= email], [type=password]{
 #bold{
     color: #ff7978;
 }
+input:focus:invalid{
+    outline: none;
+    border: none;
+    border: 1px solid #ff7978;
+    background-image: url('icon-error.svg');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-origin: content-box;
+}
+input:focus:invalid+span{
+    display: inline;
+    color: #ff7978;
+    float: right;
+    font-size: 12px;
+    margin-right: 3em;
+    font-style: italic;
+}
+input:valid{
+    outline: none;
+    border: none;
+    border: 1px solid #38CC8C;
+}
+span{
+    display: none;
+}
+@media screen and (max-width: 375px){
+    body{
+        background-image: url("bg-intro-mobile.png");
+        background-color: #FE7A77;
+    }
+    main{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .textDIV{
+        margin-top: 3em;
+        margin-bottom: 2em;
+    }
+    #trialButton{
+        margin-bottom: 1em;
+    }
+    .interactDIV{
+        margin-bottom: 2em;
+    }
+}
